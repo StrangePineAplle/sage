@@ -1,10 +1,7 @@
-import os
-
 from setuptools import setup, find_packages
 
 with open("README.md", mode="r", encoding="utf-8") as readme_file:
     readme = readme_file.read()
-
 
 requirements = [
     "numpy",
@@ -20,13 +17,13 @@ requirements = [
     "matplotlib>=3.2,<3.7",
     "torch>=1.9.0,<=2.2.0",
     "transformers>=4.20.0",
-    "augmentex==1.2.1"
+    "augmentex==1.3.1",
 ]
 
 extras_requirements = {
     "errant": [
-        "ru-core-news-lg @ https://huggingface.co/spacy/ru_core_news_lg/resolve/main/ru_core_news_lg-any-py3-none-any.whl",
-        "errant @ git+https://github.com/Askinkaty/errant/@4183e57",
+        "ru-errant",
+        "spacy>=3.7.0,<3.8.0",
         "Levenshtein"
     ]
 }

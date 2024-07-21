@@ -6,7 +6,7 @@ from sage.evaluation import Scorer
 
 class TestRuErrantErrorAnnotation(unittest.TestCase):
 
-    scorer = RuErrantScorer()
+    scorer = RuErrantScorer("ru_core_news_lg")
 
     def test_1w_spell_only(self):
         source = self.scorer.annotator.parse("карова")

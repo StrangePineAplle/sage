@@ -14,7 +14,7 @@ Examples:
     from corruptor import SBSCCorruptor
 
     config = SBSCConfig(
-        lang="ru",
+        lang="rus",
         reference_dataset_name_or_path="RUSpellRU"
     )
     corruptor = SBSCCorruptor.from_config(config)

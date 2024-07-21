@@ -6,7 +6,6 @@ error classification and are described in detail in the readme.
 """
 
 from __future__ import annotations
-
 import re
 from collections import Counter, namedtuple
 from typing import Iterable
@@ -45,9 +44,9 @@ def update_spacy_tokenizer(nlp):
 class RuErrantScorer:
     """A scorer to evaluate spelling correction triplets with ERRANT metric."""
 
-    def __init__(self) -> None:
+    def __init__(self, spacy_model: str) -> None:
         self.annotator = Annotator("ru",
-                                   nlp=update_spacy_tokenizer(spacy.load("ru_core_news_lg")),
+                                   nlp=update_spacy_tokenizer(spacy.load(spacy_model)),
                                    merger=merger,
                                    classifier=classifier)
 

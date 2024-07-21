@@ -20,9 +20,9 @@ class Scorer:
         errant: a RuErrantScorer instance (unless Scorer is initialized with load_errant=False).
     """
 
-    def __init__(self, load_errant=True) -> None:
+    def __init__(self, load_errant=True, spacy_model="ru_core_news_lg") -> None:
         if load_errant:
-            self.errant = RuErrantScorer()
+            self.errant = RuErrantScorer(spacy_model)
         else:
             self.errant = None
 

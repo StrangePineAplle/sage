@@ -2,7 +2,7 @@
 
 Examples:
     corruptor = StatisticBasedSpellingCorruption(
-        lang="ru",
+        lang="rus",
         reference_dataset_name_or_path="RUSpellRU",
     )
     print(corruptor.corrupt(sentence))
@@ -14,7 +14,7 @@ Examples:
     sources, corrections = load_data(...)
     typos_cnt, cm, stats = process_mistypings(sources, corrections)
     corruptor = StatisticBasedSpellingCorruption(
-        lang="ru",
+        lang="rus",
         typos_count=typos_cnt,
         stats=stats,
         confusion_matrix=cm,
