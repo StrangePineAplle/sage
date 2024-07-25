@@ -9,6 +9,8 @@ setup_dir = os.path.abspath(os.path.dirname(__file__))
 augmentex_path = os.path.join(setup_dir, "wheels/augmentex-1.0.3-py3-none-any.whl")
 
 requirements = [
+    "Levenshtein",
+    "errant",
     "numpy",
     "pandas",
     "tqdm",
